@@ -4,10 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Dell/Desktop/hmazroua-Adidas-sales-invoice-generator-4de8cc1/src/com/SIG/GUI/InvoiceDesign.java</file>
-            <file>file:/C:/Users/Dell/Desktop/hmazroua-Adidas-sales-invoice-generator-4de8cc1/src/com/SIG/model/Line.java</file>
             <file>file:/C:/Users/Dell/Desktop/hmazroua-Adidas-sales-invoice-generator-4de8cc1/src/com/SIG/Control/AdidasSIGcontroller.java</file>
-            <file>file:/C:/Users/Dell/Desktop/hmazroua-Adidas-sales-invoice-generator-4de8cc1/src/com/SIG/model/Invoice.java</file>
-            <file>file:/C:/Users/Dell/Desktop/hmazroua-Adidas-sales-invoice-generator-4de8cc1/src/com/SOF/model/FileOperation.java</file>
+            <file>file:/C:/Users/Dell/Desktop/hmazroua-Adidas-sales-invoice-generator-4de8cc1/src/com/SIG/model/FileOperation.java</file>
+            <file>file:/C:/Users/Dell/Desktop/hmazroua-Adidas-sales-invoice-generator-4de8cc1/src/com/SIG/model/InvoicesTableModel.java</file>
         </group>
     </open-files>
 </project-private>

@@ -45,7 +45,7 @@ public class Line {
     }
 
     public double getPrice() {
-        return (long) price;
+        return  price;
     }
 
     public void setPrice(double price) {
@@ -63,6 +63,16 @@ public class Line {
     
     public String getAsCSV() {
         return invoice.getNum() + "," + item + "," + price + "," + count;
+        
+    }
+
+    String getItemname() {
+       return item;
+        
+    }
+
+    double getItemprice() {
+       return price;
         
     }
 

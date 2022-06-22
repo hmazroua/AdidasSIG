@@ -1,5 +1,5 @@
 
-package com.SOF.model;
+package com.SIG.model;
 
 import com.SIG.model.Invoice;
 import com.SIG.model.Line;
@@ -60,24 +60,23 @@ public class FileOperation {
                     System.out.println("Lines have been read");
                     for (String lineLine : Lines) {
                         try {
-                            String lineParts[] = lineLine.split(",");
-                            int invoiceNum = Integer.parseInt(lineParts[0]);
-                            String itemName = lineParts[1];
-                            double itemPrice = Double.parseDouble(lineParts[2]);
-                            int count = Integer.parseInt(lineParts[3]);
+                            String[] lineLineParts = lineLine.split(",");
+                            int invoiceNum = Integer.parseInt(lineLineParts[0]);
+                            String itemName = (lineLineParts[1]);
+                            double itemPrice = Double.parseDouble(lineLineParts[2]);
+                            int count = Integer.parseInt(lineLineParts[3]);
                             Invoice inv = null;
-                            for (Invoice invoice : invoicesArray) {
-                                if (invoice.getIdNum() == invoiceNum) {
-                                    inv = invoice;
-                                    break;
-                                }
-                            }
-
-                            Line line = new Line(itemName, itemPrice, count, inv);
-                            inv.getLines().add(line);
-                        } catch (Exception ex) {
-                            ex.printStackTrace();
-                            JOptionPane.showMessageDialog(null, "Error in line format", "Error", JOptionPane.ERROR_MESSAGE);
+                            for (Invoice invoice : invoicesArray){
+                            if (invoice.getNum() == invoiceNum){
+                            inv = invoice;
+                            break;
+                         }
+                        }
+                            Line line = new Line(invoiceNum, itemName, itemPrice, count, inv);
+                             inv.getLines().add(line);
+                              } catch (Exception ex){
+                              ex.printStackTrace();
+                              JOptionPane.showMessageDialog(null, "Error in line format", "Error", JOptionPane.ERROR_MESSAGE);
                                 //Reminder to load only CSV file and error popup appear when try to choose fault file type
                            }
                         }
@@ -111,7 +110,7 @@ public class FileOperation {
           System.out.println("\n Invice " + invId + "\n {\n " + date + "," + customer);
           ArrayList<Line> lines = invoice.getLines();
           for(Line line : invoice.getLines()){
-              System.out.println( line.getCount() + "," + line.getItem() + "," + line.getPrice());
+              System.out.println( line.getItemname() + "," + line.getPrice() + "," + line.getCount());
           }
           
           System.out.println(" } \n");
